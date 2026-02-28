@@ -1,11 +1,11 @@
-# IngredientAI - Food Ingredient Analyzer
+# AI - Food Ingredient Analyzer
 
 A web application that analyzes food product ingredients using OCR and AI to determine their health impact and provides detailed insights about ingredient categories.
 
 ## Features
 
 - **Smart OCR**: Advanced image processing to accurately extract ingredients from photos
-- **AI-Powered Analysis**: Uses OpenAI GPT-4 to analyze ingredients and their health impacts
+- **AI-Powered Analysis**: Uses Groq API (LLaMA model) to analyze ingredients and their health impacts
 - **Multiple Input Methods**: 
   - Text input
   - Camera capture with image cropping
@@ -28,7 +28,7 @@ A web application that analyzes food product ingredients using OCR and AI to det
 - **UI Framework**: Bootstrap 5
 - **Charts**: Chart.js
 - **OCR**: Tesseract with OpenCV
-- **AI**: OpenAI GPT-4 API
+- **AI**: Groq API (LLaMA model)
 - **Image Processing**: PIL, OpenCV
 
 ## Prerequisites
@@ -36,7 +36,7 @@ A web application that analyzes food product ingredients using OCR and AI to det
 1. Python 3.8 or higher
 2. Tesseract OCR installed on your system
 3. MongoDB installed and running
-4. OpenAI API key
+4. Groq API key
 
 ## Installation
 
@@ -61,7 +61,7 @@ Create a `.env` file in the root directory and add:
 ```
 MONGODB_URI=your_mongodb_uri
 SECRET_KEY=your_secret_key
-OPENAI_API_KEY=your_openai_api_key
+GROQ_API_KEY=your_groq_api_key
 TESSERACT_PATH=path_to_tesseract_executable
 ```
 
@@ -105,7 +105,7 @@ IngredientAI/
 |----------|-------------|----------|
 | MONGODB_URI | MongoDB connection string | Yes |
 | SECRET_KEY | Flask secret key | Yes |
-| OPENAI_API_KEY | OpenAI API key | Yes |
+| GROQ_API_KEY | GROQ API key | Yes |
 | TESSERACT_PATH | Path to Tesseract executable | Yes |
 | DEBUG | Enable debug mode | No |
 
