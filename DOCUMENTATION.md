@@ -23,7 +23,7 @@ The AI Ingredient Analyzer is an advanced web application that helps users analy
 - **OpenCV** (planned): For advanced image preprocessing
 
 ### AI & Machine Learning
-- **OpenAI API** (v1.0.0): Integration with OpenAI's language models for ingredient analysis
+- **Groq API (LLaMA model)** : Integration with Groq's language models for ingredient analysis
 - Future integrations planned:
   - Advanced OCR capabilities
   - Custom trained models for ingredient classification
@@ -75,8 +75,8 @@ AI-Ingredient-Analyzer/
 
 ## API Integration
 
-### OpenAI Integration (Planned)
-The system will utilize OpenAI's API for:
+### Groq AI Integration (Planned)
+The system will utilize Groq API for:
 - Natural language processing of ingredient lists
 - Detailed ingredient analysis
 - Safety assessments
@@ -84,11 +84,11 @@ The system will utilize OpenAI's API for:
 
 Example API usage:
 ```python
-import openai
+import groq
 
 async def analyze_ingredients(ingredient_list):
-    response = await openai.ChatCompletion.create(
-        model="gpt-4",
+    response = await groq.ChatCompletion.create(
+        model=" Model_Name_Here",
         messages=[
             {"role": "system", "content": "You are an expert in food ingredients analysis."},
             {"role": "user", "content": f"Analyze these ingredients: {ingredient_list}"}
@@ -138,7 +138,7 @@ Required environment variables in `.env`:
 ```
 MONGODB_URI=your_mongodb_connection_string
 SECRET_KEY=your_secret_key
-OPENAI_API_KEY=your_openai_api_key
+GROQ_API_KEY=your_groq_api_key
 ```
 
 ## Contributing
